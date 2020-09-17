@@ -3,3 +3,5 @@
 Using Spring Boot, a simple web UI displays the total confirmed cases for each country. The data is updated every 24 hours. 
 
 
+## Data Source:
+https://github.com/CSSEGISandData/COVID-19
