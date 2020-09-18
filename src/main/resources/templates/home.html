@@ -5,15 +5,17 @@
 <head>
     <title>Coronavirus Tracker Application</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="d-flex flex-column">
 <div class="container">
-<h1>Coronavirus Tracker Application</h1>
-<p> This application lists the current number of cases reported across the globe.</p>
+<h1>COVID-19 Global Tracker</h1>
+    <p> COVID-19 is the infectious disease caused by the most recently discovered
+    coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019.
+    COVID-19 is now a pandemic affecting many countries globally.</p>
 
 <div class="jumbotron">
     <h1 class="display-4n" th:text="${totalReportedCases}"></h1>
@@ -31,7 +33,7 @@
     <th>State</th>
     <th>Country</th>
     <th>Total Cases Reported</th>
-    <th>Changes since last day</th>
+    <th>Changes Since Last Day</th>
 </tr>
     </thead>
 <tr th:each="locationStat : ${locationStats}">
@@ -41,9 +43,10 @@
     <td th:text="${locationStat.diffFromPrevDay}">0</td>
 </tr>
 </table>
-
-
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Edwin Andrew</small>
+        </div>
+    </footer>
 </body>
-
-
 </html>
